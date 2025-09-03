@@ -1,10 +1,9 @@
 name: Nightly Tests (macOS)
 
 on:
-  schedule:
-    - cron: "40 1 * * *"
-  workflow_dispatch:
-    branches:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["master"]
 
 jobs:
   build:
